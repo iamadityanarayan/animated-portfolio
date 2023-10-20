@@ -1,5 +1,6 @@
 import React from 'react';
 import './navbar.scss';
+import { motion } from 'framer-motion';
 
 type Props = {};
 
@@ -8,7 +9,13 @@ const Navbar = (props: Props) => {
     <div className='navbar'>
       {/* Sidebar */}
       <div className='wrapper'>
-        <span>Aditya</span>
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.2 }}
+        >
+          Aditya
+        </motion.span>
         <div className='social'>
           <a href='' title='x'>
             <img src='/facebook.png' alt='' />
